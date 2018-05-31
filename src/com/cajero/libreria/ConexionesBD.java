@@ -32,7 +32,7 @@ public class ConexionesBD {
         }
     }
 
-    static ResultSet rs;
+    public ResultSet rs;
 
     /**
      * @param consulta Consulta que quieres realizar en la base de datos.
