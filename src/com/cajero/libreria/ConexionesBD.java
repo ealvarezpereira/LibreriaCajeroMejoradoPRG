@@ -43,7 +43,6 @@ public class ConexionesBD {
             Statement st = conn.createStatement();
             rs = st.executeQuery(consulta);
 
-            rs.close();
         } catch (SQLException ex) {
             System.out.println("Error en el ResultSet de la librería. " + ex);
         }
