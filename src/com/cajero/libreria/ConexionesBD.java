@@ -23,7 +23,7 @@ public class ConexionesBD {
     /**
      * @param url Url de la base de datos.
      */
-    public void conexionBase(String url) {
+    public static void conexionBase(String url) {
         try {
             conn = DriverManager.getConnection(url);
 
@@ -32,12 +32,12 @@ public class ConexionesBD {
         }
     }
 
-    public ResultSet rs;
+    public static ResultSet rs;
 
     /**
      * @param consulta Consulta que quieres realizar en la base de datos.
      */
-    public void resultSet(String consulta) {
+    public static void resultSet(String consulta) {
 
         try {
             Statement st = conn.createStatement();
@@ -48,12 +48,12 @@ public class ConexionesBD {
         }
     }
 
-    static PreparedStatement pst;
+    public static PreparedStatement pst;
 
     /**
      * @param consulta Consulta que quieres realizar en la base de datos.
      */
-    public void preparedStatement(String consulta) {
+    public static void preparedStatement(String consulta) {
 
         try {
             pst = conn.prepareStatement(consulta);
@@ -62,7 +62,7 @@ public class ConexionesBD {
 
             pst.close();
         } catch (SQLException ex) {
-            System.out.println("Error al ingresar ticket. " + ex);
+            System.out.println("Error al ingresar. " + ex);
         }
     }
 }
