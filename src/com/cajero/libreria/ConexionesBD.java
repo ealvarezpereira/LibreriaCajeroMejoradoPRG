@@ -11,6 +11,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -58,7 +59,7 @@ public class ConexionesBD {
         try {
             pst = conn.prepareStatement(consulta);
             pst.executeUpdate();
-            System.out.println("Realizado.");
+            JOptionPane.showMessageDialog(null, "Realizado correctamente.");
 
             pst.close();
         } catch (SQLException ex) {
