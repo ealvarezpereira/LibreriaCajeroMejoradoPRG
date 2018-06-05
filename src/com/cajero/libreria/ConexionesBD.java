@@ -59,8 +59,6 @@ public class ConexionesBD {
         try {
             pst = conn.prepareStatement(consulta);
             pst.executeUpdate();
-            JOptionPane.showMessageDialog(null, "Realizado correctamente.");
-
             pst.close();
         } catch (SQLException ex) {
             System.out.println("Error al ingresar. " + ex);
